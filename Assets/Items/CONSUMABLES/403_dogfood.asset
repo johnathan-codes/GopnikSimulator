@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f84879732e5ccb449c795ffe819067f, type: 3}
+  m_Name: 403_dogfood
+  m_EditorClassIdentifier: 
+  name: DOG FOOD
+  icon: {fileID: 21300000, guid: 1d8ccf2ef3150684dacb0f157c8f8b25, type: 3}
+  cost: 100
+  bonusCrim: 0
+  isBought: 0
+  plusHealth: 0
+  plusDrunk: 0
+  plusCancer: 0
+  isWearable: 0
+  isFood: 1
+  restoreHealth: 30
+  equipmentSlot: 2

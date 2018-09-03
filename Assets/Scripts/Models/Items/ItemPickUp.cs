@@ -35,33 +35,33 @@ public class ItemPickUp: MonoBehaviour
             if ((float)item.cost <= character.brubles)
             {
                 character.DecreaseMoney(item.cost);
-                Debug.Log("Kupuješ " + item.name + " za " + item.cost);
+                GameObject.Find("errors_text").GetComponent<Text>().text = "YOU BOUGHT " + item.name + " FOR " + item.cost;
                 character.RestoreHealth(item.restoreHealth);
                 character.AddCancer(item.plusCancer);
                 character.AddDrunk(item.plusDrunk);
-                /*
+                
                 if (character.currentHealth >= character.maxHealth)
                     character.RestoreHealth(0);
-                    */
             }
         }
-        else if ((item.cost <= character.brubles) && (item.isBought == false) && (Inventory.instance.space > Inventory.instance.items.Count))
+        else if ((item.cost <= character.brubles) && (item.isBought == false) && ((Inventory.instance.space-4) > Inventory.instance.items.Count))
         {
             character.DecreaseMoney(item.cost);
-            Debug.Log("Kupuješ " + item.name + " za " + item.cost);
+            GameObject.Find("errors_text").GetComponent<Text>().text = "YOU BOUGHT " + item.name + " FOR " + item.cost;
             Inventory.instance.Add(item);
 
             item.isBought = true;
-        }/*
+        }
         else if (item.isBought == true)
         {
-            Debug.Log("Už bolo kúpené" + item.name);
+            GameObject.Find("errors_text").GetComponent<Text>().text = "YOU ALREADY OWN THIS ITEM!";
         }
-        //else if (Inventory.instance.space <= Inventory.instance.items.Count)
-        //{
-        //    Debug.Log("Nie je miesto");
-        //}
-        */
+        else if ((Inventory.instance.space-4) <= Inventory.instance.items.Count)
+        {
+            GameObject.Find("errors_text").GetComponent<Text>().text = "NOT ENOUGH SPACE!";
+
+        }
+        
     }
 
     public void OnMouseOver()

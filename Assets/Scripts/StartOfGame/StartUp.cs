@@ -4,17 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using Assets.Scripts.StartOfGame;
 
-public class StartUp : MonoBehaviour {
-
-    /* List of Canvases
-     * StartUp
-     * PaperWork
-     * MenuAndStats
-     * Missions
-     * Shop
-     * Inventory
-     * Achievements
-     */
+public class StartUp : MonoBehaviour
+{
     public StartUp start;
     public SaveLoad saveLoad;
 
@@ -44,13 +35,12 @@ public class StartUp : MonoBehaviour {
         if(PlayerPrefs.HasKey("playerFirstName"))
         { 
             GameObject.Find("btnClick").GetComponent<AudioSource>().Play();
-
+            GameObject.Find("Death").GetComponent<Canvas>().enabled = false;
             GameObject.Find("MenuAndStats").GetComponent<Canvas>().enabled = true;
             GameObject.Find("PaperWork").GetComponent<Canvas>().enabled = false;
             GameObject.Find("Missions").GetComponent<Canvas>().enabled = false;
             GameObject.Find("Shop").GetComponent<Canvas>().enabled = false;
             GameObject.Find("Inventory_C").GetComponent<Canvas>().enabled = false;
-            GameObject.Find("Achievements").GetComponent<Canvas>().enabled = false;
             GameObject.Find("StartUp").GetComponent<Canvas>().enabled = false;
         }
         //var saveLoad = GetComponent<SaveLoad>();
@@ -67,10 +57,8 @@ public class StartUp : MonoBehaviour {
         GameObject.Find("Missions").GetComponent<Canvas>().enabled = false;
         GameObject.Find("Shop").GetComponent<Canvas>().enabled = false;
         GameObject.Find("Inventory_C").GetComponent<Canvas>().enabled = false;
-        GameObject.Find("Achievements").GetComponent<Canvas>().enabled = false;
-
+        GameObject.Find("Death").GetComponent<Canvas>().enabled = false;
         GameObject.Find("StartUp").GetComponent<Canvas>().enabled = true;
-
     }
 
     public void Credits()

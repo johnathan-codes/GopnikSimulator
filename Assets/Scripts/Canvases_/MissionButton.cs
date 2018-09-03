@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-using Assets.Scripts.Canvases_;
 
 
 public class MissionButton : MonoBehaviour
@@ -48,7 +47,7 @@ public class MissionButton : MonoBehaviour
             {
                 timer -= Time.deltaTime;                                                                                               //po sekundách znižuj čas
                 TimeSpan time_Span = TimeSpan.FromSeconds(timer);                                                                      //premenná time span ktorá rozdelí čas na hodiny, minuty a sekundy
-                string time_Text = string.Format("{0:D2}:{1:D2}:{2:D2}", time_Span.Hours, time_Span.Minutes, time_Span.Seconds);       //hodiny, minuty, sekundy do textu
+                //string time_Text = string.Format("{0:D2}:{1:D2}:{2:D2}", time_Span.Hours, time_Span.Minutes, time_Span.Seconds);       //hodiny, minuty, sekundy do textu
                 loadingMissionBar.fillAmount = timer / baseTime;                                                                       //odlievaj z obrázku -> loading bar
                 reward.text = "Reward: " + (lowerReward + (lowerReward * player.skill.GetValue())/10) + " - " + (higherReward + (higherReward * player.skill.GetValue())/10);
             duration.text = "Duration: " + string.Format("{0:D2}:{1:D2}:{2:D2}", TimeSpan.FromSeconds(timer).Hours, TimeSpan.FromSeconds(timer).Minutes, TimeSpan.FromSeconds(timer).Seconds);
@@ -75,6 +74,5 @@ public class MissionButton : MonoBehaviour
         yield return new WaitForSeconds(timer);                                                                                    //počkaj určitý čas (timer)
         int pomoc = (int)UnityEngine.Random.Range(lowerReward+(lowerReward*player.skill.GetValue()/10), higherReward + (higherReward * player.skill.GetValue()) /10);
         player.AddMoney(pomoc);                                           //po ubehnutí času pridaj hráčovi peniaze
-        //AchievementController.instance.earnedMoney += pomoc;
     }
 }

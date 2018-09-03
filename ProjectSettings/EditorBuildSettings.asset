@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Gopnik Simulator.unity
-    guid: d0486cde55440104fa1476ba90bc13a3
+    path: Assets/Scenes/01_test.unity
+    guid: 0ab45a0009f909643a84f7016efd4763

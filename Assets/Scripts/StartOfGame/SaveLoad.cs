@@ -18,8 +18,7 @@ namespace Assets.Scripts.StartOfGame
             PlayerPrefs.SetFloat("cancer",character.cancer);
             PlayerPrefs.SetFloat("wantedLVL", character.wantedLVL);
             PlayerPrefs.SetFloat("drunk", character.drunk);
-            //Inventory.instance.SaveItems();
-            //PlayerPrefs.SetInt("naMissions", character.numberOfMissions);
+            PlayerPrefs.SetInt("naMissions", character.numberOfMissions);
         }
 
 
@@ -31,8 +30,7 @@ namespace Assets.Scripts.StartOfGame
             character.SetCancer(PlayerPrefs.GetFloat("cancer"));
             character.SetWanted(PlayerPrefs.GetFloat("wantedLVL"));
             character.SetDrunk(PlayerPrefs.GetFloat("drunk"));
-            Inventory.instance.LoadItems();
-            //character.SetNumberOfMissions(PlayerPrefs.GetInt("naMissions"));
+            character.SetNumberOfMissions(PlayerPrefs.GetInt("naMissions"));
         }
 
         public void NewGame()

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/01_test.unity
+- path: Assets/Scenes/Gopnik Simulator.unity
   isLoaded: 1
   isActive: 1

@@ -157,6 +157,13 @@ public class CharacterStats : MonoBehaviour
     public virtual void Die()
     {
         Debug.Log("You died!");
+        GameObject.Find("PaperWork").GetComponent<Canvas>().enabled = false;
+        GameObject.Find("MenuAndStats").GetComponent<Canvas>().enabled = false;
+        GameObject.Find("Missions").GetComponent<Canvas>().enabled = false;
+        GameObject.Find("Shop").GetComponent<Canvas>().enabled = false;
+        GameObject.Find("Inventory_C").GetComponent<Canvas>().enabled = false;
+        GameObject.Find("StartUp").GetComponent<Canvas>().enabled = false;
+        GameObject.Find("Death").GetComponent<Canvas>().enabled = true;
     }
     void Update()
     {
@@ -182,12 +189,8 @@ public class CharacterStats : MonoBehaviour
         {
             brubles = brubles / 2;
             wantedLVL = 0;
-            Debug.Log("Chytili ťa keket");
-        }
-        if(currentHealth <= 0)
-        {
-            Die();
-
+            GameObject.Find("caught_text").GetComponent<Text>().enabled = true;
+            StartCoroutine(HideCaught());
         }
     }
 
@@ -215,5 +218,10 @@ public class CharacterStats : MonoBehaviour
         yield return new WaitForSecondsRealtime(10);
         currentHealth -= 1 + (1 * cancer);
         StartCoroutine(DecreaseHealth());
+    }
+    IEnumerator HideCaught()
+    {
+        yield return new WaitForSecondsRealtime(10);
+        GameObject.Find("caught_text").GetComponent<Text>().enabled = false;
     }
 }

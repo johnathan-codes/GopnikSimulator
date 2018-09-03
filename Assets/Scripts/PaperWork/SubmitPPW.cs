@@ -7,7 +7,7 @@ public class SubmitPPW : MonoBehaviour
 {
     public InputField ifFirstName, ifSurname, ifBirthday, ifCountry;
     public Dropdown ddlGender;
-    
+    public CharacterStats character;
 
 	public void btnSubmit()
     {
@@ -23,6 +23,7 @@ public class SubmitPPW : MonoBehaviour
             GameObject.Find("MenuAndStats").GetComponent<Canvas>().enabled = true; // a zapne base menu
 
             GameObject.Find("btnClick").GetComponent<AudioSource>().Play();
+            character.SetHealth(100);
         }
     }
 

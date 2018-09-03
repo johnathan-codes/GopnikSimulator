@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gopnik_Final", "Gopnik_Final.csproj", "{C15FC24A-E18C-C2A0-693D-E8D15541CB6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gopnik_Final.Editor", "Gopnik_Final.Editor.csproj", "{39C45BC9-6B5D-0769-B1A9-CDE37B9F7F97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{C15FC24A-E18C-C2A0-693D-E8D15541CB6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C15FC24A-E18C-C2A0-693D-E8D15541CB6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C15FC24A-E18C-C2A0-693D-E8D15541CB6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39C45BC9-6B5D-0769-B1A9-CDE37B9F7F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39C45BC9-6B5D-0769-B1A9-CDE37B9F7F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39C45BC9-6B5D-0769-B1A9-CDE37B9F7F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39C45BC9-6B5D-0769-B1A9-CDE37B9F7F97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

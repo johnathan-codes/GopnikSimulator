@@ -72,6 +72,7 @@ public class Inventory:MonoBehaviour {
     
     public void SaveItems()
     {
+        EquipmentManager.instance.UnequipAll();
         //SaveGame.Save("inventory", items);
         for (int i =0; i < items.Count; i++)
         {
